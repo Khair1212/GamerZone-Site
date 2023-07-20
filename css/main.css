@@ -40,7 +40,7 @@
 
 }
 
-.nav-brand, .footer-brand {
+.nav-brand, .footer-brand{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,7 +79,7 @@
 .banner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
 }
@@ -140,7 +140,8 @@
 }
 
 .section-button button {
-    margin-top: 20px;
+    margin-top: 1.25rem;
+    margin-right: 1.25rem;
     padding: 0.75rem 1.5rem;
     border-radius: 3rem;
     color: #FFF;
@@ -196,7 +197,7 @@
     color: #534C64;
     font-size: 1.5rem;
     font-weight: 700;
-    line-height: 45px;
+    line-height: 2.75rem;
 }
 
 
@@ -244,7 +245,7 @@
     height: 20rem;
     /* margin-right: 20px; */
     border-radius: 16px;
-
+    position: relative;
 
 
 }
@@ -252,6 +253,7 @@
 .card {
     width: 100%;
     height: 25rem;
+    
 }
 
 .card-1 {
@@ -279,6 +281,43 @@
 }
 
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: opacity 0.3s ease;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+}
+
+.play-icon {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.play-text {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+/* .card-image:hover{
+    border: 3px solid var(--primary-color);
+    
+} */
 /* Play instant Section */
 
 .play-instant {
@@ -477,6 +516,7 @@
 
 .footer{
     background: #0B0223;
+    padding: 3rem;
 }
 
 .footer-brand{
@@ -489,6 +529,7 @@
     display: flex;
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .footer-links a, .footer-terms a{
@@ -502,17 +543,24 @@
     display: flex;
     justify-content: center;
     gap:30px;
-    margin-bottom: 3.5rem;
+    flex-wrap: wrap;
+    
 }
 .footer-social img{
     width: 32px;
 }
-
+.footer-text p{
+    font-size: 5rem;
+}
 .footer-terms a{
+    margin-top: 3.5rem;
     color: rgba(255, 255, 255, 0.60);
     font-size: 1rem;
 }
 
-.hide{
-    display: none;
+.footer-end{
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 1rem; text-align: center;
 }
+
+
